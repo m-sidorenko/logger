@@ -1,7 +1,7 @@
-package net.nomia.utils.logger
+package src
 
 /**
- * The `interface Loggable` is defining a contract for classes that want to implement logging
+ * The `interface src.Loggable` is defining a contract for classes that want to implement logging
  * functionality. 
  */
 interface Loggable {

@@ -1,9 +1,9 @@
-package net.nomia.utils.logger.impl
+package src.impl
 
-import net.nomia.utils.logger.Loggable
+import src.Loggable
 
 /**
- * The ConsoleLogger class is an implementation of the Loggable interface. 
+ * The ConsoleLogger class is an implementation of the src.Loggable interface.
  */
 open class ConsoleLogger : Loggable {
 

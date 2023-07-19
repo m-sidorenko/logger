@@ -1,6 +1,6 @@
-package net.nomia.utils.logger
+package src
 
-import net.nomia.utils.logger.impl.ConsoleLogger
+import src.impl.ConsoleLogger
 
 object Logger {
     private var log: Loggable = ConsoleLogger()
@@ -9,7 +9,7 @@ object Logger {
     /**
      * The function sets the logger.
      * 
-     * @param logger The `logger` parameter is an object that implements the `Loggable` interface.
+     * @param logger The `logger` parameter is an object that implements the `src.Loggable` interface.
      */
     fun setLogger(logger: Loggable) {
         log = logger
@@ -18,7 +18,7 @@ object Logger {
     /**
      * The function sets the level for logger.
      * 
-     * @param logLevel The logLevel parameter is of type LogLevel.
+     * @param logLevel The logLevel parameter is of type src.LogLevel.
      */
     fun setLevel(logLevel: LogLevel) {
         level = logLevel

@@ -1,4 +1,4 @@
-package net.nomia.utils.logger.coroutine
+package src.coroutine
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.Flow
@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onEmpty
 import kotlinx.coroutines.flow.onStart
-import net.nomia.utils.logger.Logger.d
-import net.nomia.utils.logger.LifecycleLog.e
+import src.Logger.d
+import src.LifecycleLog.e
 
 /**
  * The `log` function is an extension function for the `Flow` class in Kotlin coroutines. 

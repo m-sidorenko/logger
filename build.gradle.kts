@@ -8,7 +8,6 @@ buildscript {
 
 plugins {
     kotlin("jvm") version "1.7.21"
-    // id("maven-publish")
 }
 
 repositories {
@@ -23,17 +22,17 @@ java {
     withSourcesJar()
 }
 
-val gitLabPrivateTokenType: String by project
-val gitLabPrivateToken: String by project
+//val gitLabPrivateTokenType: String by project
+//val gitLabPrivateToken: String by project
 
 allprojects {
 
     repositories {
         mavenLocal()
         mavenCentral()
-        maven {
+        /*maven {
             name = "gitlab-maven"
-            url = uri("https://nomia.dev/api/v4/groups/nomia/-/packages/maven")
+            url = uri("")
             credentials(HttpHeaderCredentials::class.java) {
                 name = gitLabPrivateTokenType
                 value = gitLabPrivateToken
@@ -41,7 +40,7 @@ allprojects {
             authentication {
                 create<HttpHeaderAuthentication>("header")
             }
-        }
+        }*/
     }
 
     tasks.withType<JavaCompile> {
@@ -57,13 +56,14 @@ allprojects {
     }
 }
 
+/*
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("mavenJava") {
-                groupId = "net.nomia.util"
-                artifactId = "logger"
-                version = "0.0.2"
+                groupId = ""
+                artifactId = ""
+                version = ""
 
                 afterEvaluate {
                     from(components["java"])
@@ -73,7 +73,7 @@ afterEvaluate {
 
         repositories {
             maven {
-                url = uri("https://nomia.dev/api/v4/projects/166/packages/maven")
+                url = uri("")
                 credentials(HttpHeaderCredentials::class.java) {
                     name = gitLabPrivateTokenType
                     value = gitLabPrivateToken
@@ -84,4 +84,4 @@ afterEvaluate {
             }
         }
     }
-}
+}*/

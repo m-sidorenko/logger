@@ -1,4 +1,4 @@
-package net.nomia.utils.logger
+package src
 
 internal object LifecycleLog {
     // TAG: methodName [Thread] > onLifecycle
@@ -8,7 +8,14 @@ internal object LifecycleLog {
 
     // TAG: methodName [Thread] > onLifecycle: value
     fun d(tag: String, methodName: String, lifecycleName: String, arg: Any) {
-        Logger.d(tag, "%s [%s] > %s: %s", methodName, Thread.currentThread().name, lifecycleName, arg)
+        Logger.d(
+            tag,
+            "%s [%s] > %s: %s",
+            methodName,
+            Thread.currentThread().name,
+            lifecycleName,
+            arg
+        )
     }
 
     // TAG: [Thread]: onError

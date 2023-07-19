@@ -1,4 +1,4 @@
-package net.nomia.utils.logger
+package src
 
 /**
  * The enumeration of log levels with the priority
